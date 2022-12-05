@@ -3,12 +3,15 @@ let tas=document.getElementById("tas")
 let kagit=document.getElementById("kagit")
 let makas=document.getElementById("makas")
 let pcSelections=document.getElementById("pcSelections")
+let playerSelections=document.getElementById("playerSelections")
 let conclusion=document.getElementById("conclusion")
+let choice=["tas", "kagıt", "makas"]
 
+pcSelections=(Math.round(Math.random()*2))
+
+selections();
 
 function selections(){
-
-    pcSelections=(Math.round(Math.random()*2))
 
     if
     (pcSelections==0 && playerSelections==0){
@@ -58,5 +61,9 @@ function selections(){
 
 }
 
-selections();
+pcSelections.innerHTML=pcSelections
+choice.innerHTML=playerSelections
+selections.innerHTML=conclusion
+
+
 
