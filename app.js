@@ -7,11 +7,16 @@ let playerSelections=document.getElementById("playerSelections")
 let conclusion=document.getElementById("conclusion")
 let choice=["tas", "kagıt", "makas"]
 
-pcSelections=(Math.round(Math.random()*2))
 
-selections();
+kagit.onclick=randomSelections;
+makas.onclick=randomSelections;
+tas.onclick=randomSelections;
+ 
 
-function selections(){
+
+function randomSelections(){ 
+
+    var pcSelections=RasgeleKagit
 
     if
     (pcSelections==0 && playerSelections==0){
@@ -57,13 +62,17 @@ function selections(){
     (pcSelections==2 && playerSelections==2){
         conclusion="AYNI SEÇİM(BERABERE)"
     }
-
-
+    conclusion.innerHTML=conclusion;
 }
 
-pcSelections.innerHTML=pcSelections
-choice.innerHTML=playerSelections
-selections.innerHTML=conclusion
+    function RasgeleKagit(){
+        var sayi= Math.round(Math.random()*2);
+        pcSelections.src=choice[sayi]; 
+
+        return sayi;
+    }
+
+
 
 
 
